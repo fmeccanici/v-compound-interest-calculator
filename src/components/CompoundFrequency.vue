@@ -11,8 +11,13 @@
 </template>
 
 <script>
+import InputField from "./InputField.vue";
+
 export default {
     name: "CompoundFrequency",
+    components: {
+        InputField
+    },
     data() {
         return {
             compoundFrequency: 'yearly'

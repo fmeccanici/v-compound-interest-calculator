@@ -28,7 +28,7 @@ import InputField from "./InputField.vue";
 export default {
     name: "YearsAndMonths",
     components: {
-        InputField
+      InputField
     },
     data() {
         return {

@@ -3,12 +3,14 @@
 </template>
 
 <script>
-import InputFieldLeadingAddOn from './InputFieldLeadingAddOn.vue';
+import InputField from './InputField.vue';
+import InputFieldLeadingAddOn from "./InputFieldLeadingAddOn.vue";
 
 export default {
     name: "InterestRate",
     components: {
-      InputFieldLeadingAddOn
+        InputField,
+        InputFieldLeadingAddOn
     },
     data() {
         return {
@@ -16,10 +18,11 @@ export default {
         }
     },
     methods: {
-        handleInterestRateInPercentagesChange() {
+        handleInterestRateInPercentagesChange(event) {
             this.$emit('interest-rate-update', this.interestRateInPercentages);
         }
     }
+
 }
 </script>
 

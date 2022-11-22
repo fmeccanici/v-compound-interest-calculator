@@ -9,8 +9,9 @@
                 :type="type"
                 :name="name"
                 :id="id"
-                :class="classes"
+                :class="class"
                 :placeholder="placeholder"
+                :value="value"
                 @input="handleInputUpdate"
                 class="
                     form-control
@@ -38,9 +39,9 @@
 
 <script>
 export default {
-    name: "InputFieldLeadingAddOn",
+    name: "InputField",
     emits: ['input-update'],
-    props: ['type', 'classes', 'required', 'value', 'selectValues', 'placeholder', 'name', 'id', 'label', 'addOn'],
+    props: ['type', 'class', 'required', 'value', 'selectValues', 'placeholder', 'name', 'id', 'label', 'addOn'],
     methods: {
         handleInputUpdate(event) {
             this.$emit('input-update', event.target.value);

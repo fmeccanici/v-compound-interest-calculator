@@ -6,7 +6,7 @@
                 :type="type"
                 :name="name"
                 :id="id"
-                v-model="value"
+                :value="value"
                 @input="handleInputUpdate"
                 class="
                     form-control
@@ -49,7 +49,7 @@
                           ease-in-out
                           m-0
                           focus:text-gray-700 focus:bg-white focus:border-primary focus:outline-none focus:ring-primary" aria-label="Default select example">
-            <option v-for="selectValue in selectValues" :value="selectValue.toLowerCase()" :key="selectValue.toLowerCase()"> {{ selectValue }}</option>
+            <option v-for="selectValue in selectValues" :value="selectValue.toLowerCase()"> {{ selectValue }}</option>
         </select>
     </div>
 
@@ -59,12 +59,7 @@
 export default {
     name: "InputField",
     emits: ['input-update'],
-    props: ['type', 'class', 'required', 'selectValues', 'placeholder', 'name', 'id', 'label'],
-    data () {
-        return {
-            value: null
-        }
-    },
+    props: ['type', 'class', 'required', 'value', 'selectValues', 'placeholder', 'name', 'id', 'label'],
     methods: {
         handleInputUpdate(event) {
             this.$emit('input-update', event.target.value);

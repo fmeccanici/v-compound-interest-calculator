@@ -12,7 +12,6 @@
             id="currencies"
         >
             <currency-radio-button
-                v-bind:key="currency"
                 v-for="(currency, index) in currencies"
                 :currency="currency"
                 :selected="selectedCurrency === currency"
@@ -32,7 +31,7 @@ import CurrencyRadioButton from "./CurrencyRadioButton.vue";
 export default {
     name: "CurrencyRadioButtons",
     components: {
-        CurrencyRadioButton
+      CurrencyRadioButton
     },
     props: ['currencies'],
     data() {

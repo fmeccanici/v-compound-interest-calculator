@@ -1,5 +1,5 @@
 <template>
-    <div :class="classes">
+    <div :class="class">
         <label :for="name" class="block text-sm font-medium text-gray-700">{{ label }}</label>
         <div
             class="relative mt-1 rounded-md"

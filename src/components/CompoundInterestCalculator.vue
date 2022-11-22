@@ -83,19 +83,19 @@ import MoneyField from "./MoneyField.vue"
 import InterestRate from "./InterestRate.vue";
 import YearsAndMonths from "./YearsAndMonths.vue";
 import CompoundFrequency from "./CompoundFrequency.vue";
-import DepositsAndWithdrawals from "./DepositsAndWithdrawals.vue";
 import OutputFieldLeadingAddOn from "./OutputFieldLeadingAddOn.vue";
+import DepositsAndWithdrawals from "./DepositsAndWithdrawals.vue";
 
 export default {
     name: "CompoundInterestCalculator",
     components: {
-      CurrencySwitch,
-      MoneyField,
-      InterestRate,
-      YearsAndMonths,
-      CompoundFrequency,
-      DepositsAndWithdrawals,
-      OutputFieldLeadingAddOn
+        CurrencySwitch,
+        MoneyField,
+        InterestRate,
+        YearsAndMonths,
+        CompoundFrequency,
+        OutputFieldLeadingAddOn,
+        DepositsAndWithdrawals
     },
     data () {
         return {
@@ -213,8 +213,6 @@ export default {
             {
                 return 365;
             }
-
-            return 1;
         },
         totalAmountOfDepositsPerYear() {
             if (this.depositFrequency  === 'yearly')
@@ -230,8 +228,6 @@ export default {
             {
                 return this.depositAmount * 365;
             }
-
-            return this.depositAmount;
         },
         withDeposits() {
             return this.useDeposits && this.depositFrequency !== null && this.depositAmount !== null ;
